@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CodeBusters</title>
+  <link rel="stylesheet" href="/views/layouts/stylemain.css"/>
+</head>
+<body>
+
+<div class="sidebar">
+  <div class="logo"><a class="text-logo" href="main.html">CodeBusters</a></div>
+  <div class="logotwo"><a class="text-logo-two" href="main.html">C<br>B</a></div>
+
+
+<div class="menu-item active" data-id="play">
+<img src="/public/icons/playicon-white.png" />
+  <span class="menu-text">Играй</span>
+</div>
+
+<div class="menu-item" data-id="shop">
+  <img src="/public/icons/storeicon-white.png" />
+  <span class="menu-text">Магазин</span>
+</div>
+
+<div class="menu-item" data-id="profile">
+  <img src="/public/icons/profileicon-white.png" />
+  <span class="menu-text">Профил</span>
+</div>
+
+
+<button id="menu-toggle" class="menu-toggle" aria-label="Toggle menu">
+</button>
+</div>
+
+<div class="content-area">
+  <!-- Играй -->
+  <div class="tab-content active" data-id="play">
+    <div id="levels" class="screen">
+      <h2>Избери ниво</h2>
+      <div class="level-buttons">
+        <!-- Dynamic level links -->
+        <a href="level.html?level=1"><button>1</button></a>
+        <a href="level.html?level=2"><button>2</button></a>
+        <a href="level.html?level=3"><button>3</button></a>
+        <a href="level.html?level=4"><button>4</button></a>
+        <a href="level.html?level=5"><button>5</button></a>
+        <a href="level.html?level=6"><button>6</button></a>
+        <a href="level.html?level=7"><button>7</button></a>
+        <a href="level.html?level=8"><button>8</button></a>
+        <a href="level.html?level=9"><button>9</button></a>
+        <a href="level.html?level=10"><button>10</button></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-content" data-id="shop">
+  <h2>Магазин</h2>
+  <div id="coinBalanceWrapper">
+  <p>Монети: <span class="coinBalance">0</span></p>
+  </div>
+  <p>Текущи артикули:</p>
+  </div>
+
+  <div class="tab-content" data-id="profile">
+    <h2>Профил</h2>
+    <div id="coinBalanceWrapper">
+    <p>Монети: <span class="coinBalance">0</span></p>
+    </div>
+    <p>Информация за потребителя и настройки.</p>
+    <div id="profile"></div>
+    <a href="index.html"><button id="logoutBtn" class="btn">Изход</button></a>
+
+  </div>
+</div>
+
+<script src="/controllers/progress.js"></script>
+<script src="/controllers/scriptlevel.js"></script>
+<script src="/controllers/sciripmainlogin.js"></script>
+
+
+</body>
+</html>
