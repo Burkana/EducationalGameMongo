@@ -1,12 +1,17 @@
-/* 1. ВАШИТЕ ЦВЕТОВЕ */
-:root {
-    --blue-eclipse-darkest: #0F0E47; /* Текст на заглавия */
-    --blue-eclipse-dark: #272757;   /* Фон на Header/Footer */
-    --blue-eclipse-medium: #505081; /* Основен цвят на бутони/акцент */
-    --blue-eclipse-light: #8686AC;
+ :root {
+      --blue-eclipse-darkest: #0F0E47;
+      --blue-eclipse-dark:    #272757;
+      --blue-eclipse-medium:  #505081;
+      --blue-eclipse-light:   #8686AC;
+
+      --primary-color:        var(--blue-eclipse-darkest);
+      --main-bg-color:        var(--blue-eclipse-dark);
+      --hover-color:          var(--blue-eclipse-medium);
+      --active-border-color:  var(--blue-eclipse-light);
+
 }
 
-/* 2. ГЛОБАЛНИ РЕСЕТИ */
+
 * {
     margin: 0;
     padding: 0;
@@ -16,17 +21,13 @@
 }
 
 body {
-    background-color: white; /* Цвят на фон */
+    background-color: white; 
     min-height: 100vh;
-    /* Уверете се, че тялото има достатъчно височина за фуутъра */
-    padding-bottom: 70px; /* Отстъп отдолу за фиксиран фуутър */
+    padding-bottom: 70px;
 }
 
-/* 3. ПЕРСОНАЛИЗИРАНИ СТИЛОВЕ (КОИТО НЕ СА BOOTSTRAP) */
-
-/* Заглавието е облечено в <nav class="navbar bg-dark"> в HTML-а */
 .navbar {
-    background-color: var(--blue-eclipse-dark) !important; /* Налагаме вашия цвят */
+    background-color: var(--blue-eclipse-dark) !important; 
     color: white;
 }
 .logo a {
@@ -36,53 +37,55 @@ body {
     text-decoration: none;
 }
 
-/* Центриране на основното съдържание */
+
 .main-content-area {
-    min-height: calc(100vh - 70px - 60px); /* 100vh - височина на header - височина на footer */
+    min-height: calc(100vh - 70px - 60px); 
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-/* Настройки за секцията с бутони */
+
 .right h1 {
     color: var(--blue-eclipse-darkest);
 }
 
-/* Скриване на снимката на малки екрани (както е във вашия CSS) */
-@media(max-width:900px){
-    /* Този клас вече е приложен в HTML-а чрез d-none d-md-block */
+
+
+
+.btn:hover {
+    background-color: #8686AC;
+    text-decoration: none;
+    color: white;
 }
 
-/* Скриване на логото на малки екрани (ако е необходимо, но обикновено се запазва) */
 
-/* Стил за Footer-а, за да съответства на Header-а */
 .footer {
     background-color: var(--blue-eclipse-dark) !important;
     color: white;
 }
-/* Добавяне на стиловете за бутоните от вашия оригинален CSS */
+
 
 .btn-custom {
-    display: block; /* Презаписва Bootstrap бутоните да са блокови елементи */
+    display: block; 
     width: 200px;
-    margin: 10px auto; /* За да останат центрирани в колоната */
+    margin: 10px auto; 
     padding: 12px 20px;
     font-size: 1rem;
     font-weight: bold;
     border-radius: 8px;
     cursor: pointer;
-    text-decoration: none; /* За да работи с <a> тагове */
+    text-decoration: none; 
 }
 
-/* Стил за бутон "Регистрация" */
+
 .btn-register {
     background-color: var(--blue-eclipse-medium);
     color: white;
     border: none;
 }
 
-/* Стил за бутон "Вход" */
+
 .btn-login {
     background-color: white;
     color: var(--blue-eclipse-darkest);
@@ -91,15 +94,15 @@ body {
 
 .btn-custom:hover {
     opacity: 0.9;
-    color: white; /* Запазва бял цвят при hover за .btn-register */
+    color: white; 
 }
 
-/* Поправяне на цвета за Вход при hover */
+
 .btn-login:hover {
     color: var(--blue-eclipse-darkest);
 }
 
-/* Адаптиране на .d-grid от Bootstrap към вашите нужди */
+
 .d-grid .btn-custom {
-    width: 100%; /* Запълва цялата ширина на .d-grid контейнера */
+    width: 100%; 
 }

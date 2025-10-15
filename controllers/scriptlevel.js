@@ -247,7 +247,8 @@ else if (level === 6) {
     <p>
       Използвайте <code>switch(day)</code> конструкция и попълнете 4 случая.<br>
       Всеки <code>case</code> трябва да показва ден от седмицата.<br><br>
-      Пример: <code>case 1: cout << "Monday"; break;</code>
+      Пример: <code>case 1: cout << "Monday"; break;<br>default: result = 'Invalid day';</code>
+      
     </p>
     <button id="hintBtn">Подсказка (50 монети)</button>
   `;

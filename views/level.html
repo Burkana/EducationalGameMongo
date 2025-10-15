@@ -2,71 +2,83 @@
 <html lang="bg">
 <head>
   <meta charset="UTF-8" />
-  <title id="title">
-    <!-- Title is dynamic -->
-  </title>
+  <title id="title"><!-- Title is dynamic --></title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+ 
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+    crossorigin="anonymous"
+  />
+
+ 
   <link rel="stylesheet" href="/views/layouts/stylelevel.css" />
 </head>
 <body>
-<header>
-  <h1 id="headerTitle"> 
-    <!-- Header is dynamic -->
-  </h1>
-  <div id="coinBalanceWrapper">
-  <p>Монети: <span class="coinBalance">0</span></p>
-  </div>
-</header>
 
- 
-
-<main>
-  <div id="container">
-
-    <div id="instructions">
-      <!-- Instructions content will be updated dynamically -->
+  <header class="text-center py-3">
+    <h1 id="headerTitle"><!-- Dynamic Title --></h1>
+    <div id="coinBalanceWrapper" class="mt-2">
+      <p>Монети: <span class="coinBalance">0</span></p>
     </div>
+  </header>
 
-    <div id="playground">
-      <div id="codeWrapper">
-        <!-- Code area inputs will be updated dynamically -->
+
+  <main class="container-fluid py-4 d-flex justify-content-center align-items-center flex-wrap">
+    <div id="container" class="row w-200 justify-content-center g-4">
+      
+      <!-- Instructions Section -->
+      <div id="instructions" class="col-12 col-md-15">
+        <!-- Filled dynamically by scriptlevel.js -->
       </div>
 
-      <button id="runBtn">Стартирай кода</button>
-      <button id="hintBtn">Подсказка</button>
+      <!-- Playground Section -->
+      <div id="playground" class="col-12 col-md-10">
+        <div id="codeWrapper">
+          <!-- Dynamically filled -->
+        </div>
 
-      <div id="nameInputWrapper" style="display:none; margin-top: 1rem;">
-        <input
-          type="text"
-          id="userInput"
-          placeholder="Въведете име..."
-          autocomplete="off"
-          spellcheck="false"
-          style="padding:0.5rem;border-radius:6px;width:100%;"
-        />
-        <button id="sayHelloBtn">Изведи поздрав</button>
-      </div>
+        <div class="d-flex flex-wrap gap-2 mt-3">
+          <button id="runBtn" class="btn btn-primary">Стартирай кода</button>
+          <button id="hintBtn" class="btn btn-secondary">Подсказка</button>
+        </div>
 
-      <div id="outputWindow"></div>
+        <div id="nameInputWrapper" class="mt-3" style="display:none;">
+          <input
+            type="text"
+            id="userInput"
+            placeholder="Въведете име..."
+            autocomplete="off"
+            spellcheck="false"
+            class="form-control"
+          />
+          <button id="sayHelloBtn" class="btn btn-success mt-2">Изведи поздрав</button>
+        </div>
 
-      <div id="levelButtons">
-        <button id="nextLevelBtn" style="display: none;">Следващо ниво</button>
-        <button id="prevLevelBtn" style="display: block;">Предишно ниво</button>
-        <a href="main.html"><button id="menuBtn">Меню</button></a>
+        <div id="outputWindow" class="mt-3"></div>
+
+        <div id="levelButtons" class="d-flex flex-wrap gap-2 mt-3">
+          <button id="nextLevelBtn" style="display: none;">Следващо ниво</button>
+          <button id="prevLevelBtn" style="display: block;">Предишно ниво</button>
+          <a href="main.html"><button id="menuBtn">Меню</button></a>
+        </div>
       </div>
     </div>
-  </div>
-</main>
-
-  <div class="footer">
-    <p>&copy;Направено от Камен и Георги най-добрите програмисти</p>
-  </div>
+  </main>
 
 
-<script src="/controllers/progress.js"></script>
-<script src="/controllers/scriptlevel.js"></script>
-<script src="/controllers/sciripmainlogin.js"></script>
+     <footer class="footer fixed-bottom">
+        <div class="container text-center">
+            <p class="m-0">&copy; Направено от Камен и Георги най-добрите програмисти</p>
+        </div>
+    </footer>
 
 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="/controllers/progress.js"></script>
+  <script src="/controllers/scriptlevel.js"></script>
+  <script src="/controllers/sciripmainlogin.js"></script>
 </body>
 </html>
